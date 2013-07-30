@@ -14,11 +14,12 @@
 	<body>
 		<h1>Waddup homie</h1>
 		<div id="errors"></div> <!-- this is to give feedback to the user to tell them they messed up -->
-		<form id="sign-up" onsubmit="validateForm();"> 
-			<label>First Name</label><input type="text"><br>
-			<label>Last Name</label><input type="text"><br>
-			<label>Zip Code</label><input type="text"><br>
-			<input type="submit" value="submit">
+		<!--<form id="sign-up" onsubmit="return getFormValidator();"> I don't want to do it this way --> <!-- we put "return" so the function returns the value, even though we already have it in our javascript function -->
+		<form id="sign-up">
+			<label id="firstName">First Name</label><input type="text"><br>
+			<label id="lastName">Last Name</label><input type="text"><br>
+			<label id="zip">Zip Code</label><input type="text"><br>
+			<input id="submit" type="submit" value="submit">
 		</form>
 
 		<img src="https://gimmebar-assets.s3.amazonaws.com/519ab838c291f.gif">

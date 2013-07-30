@@ -99,10 +99,29 @@ that will hold the end of the string.
 
 */
 
-function getFormValidator() {
-	Form.validateEmpty();
-	//Form.validateLength();
-	return false;
-}
+// function getFormValidator() {
+// 	submitButton.onsubmit = function() {
+// 		if (Form.validateEmpty == false){
+// 			console.log("wtf");
+// 			//document.getElementById("errors").innerHTML = "No empty fields pls ty";
+// 			return false;
+// 		} else {
+// 			console.log("nice");
+// 		}
+// 	}
+// 	//Form.validateEmpty();
+// 	//Form.validateLength();
+// 	return false;
+// }
 
-getFormValidator();
+submitButton.onclick = console.log("wtf");
+
+//grab the submit button
+//tie the submit button to the onclick or onsubmit event handler and put that into a function that will be called onload.
+
+var submitButton = document.getElementById("submit");
+
+
+window.onload = function(){
+	getFormValidator();
+};
