@@ -2,7 +2,7 @@
 var firstName = document.getElementById("firstName");
 var lastName = document.getElementById("lastName");
 var zip = document.getElementById("zip");
-var submitButton = document.getElementById("submit");
+var submitButton = document.getElementById("submit-button");
 
 // var Form = {
 // 	validateEmpty: function() {
@@ -16,25 +16,23 @@ var submitButton = document.getElementById("submit");
 // 	 }
 // };
 
-function validateForm() {
-	submitButton.onsubmit = function() {
-	//document.getElementById("sign-up").onsubmit = function() {
+
+	// submitButton.onclick = function() {
+	// 	alert("hi");
+	document.getElementById("sign-up").onsubmit = function() {
+		alert("bleh");
 		//prevent form submission if empty fields
 		if(firstName.value ==""){
-			alert("bleh");
 			//document.getElementById("errors").innerHTML = "Sorry, you forgot to enter your first name";
 			return false; //this prevents form submission
 		} else {
 			document.getElementById("errors").innerHTML = "";
 			return true; //this allows form submission
 		}
+		return false;
 	};
-}
 
-//call the validateForm event handler
-window.onload = function(){
-	validateForm();
-}
+
 
 // var zip = document.getElementById("zip");
 // if (tyepof(zip.value) == "") {
