@@ -17,11 +17,16 @@ var submitButton = document.getElementById("submit");
 // };
 
 function validateForm() {
-	document.getElementById("sign-up").onsubmit = function() {
+	submitButton.onsubmit = function() {
+	//document.getElementById("sign-up").onsubmit = function() {
 		//prevent form submission if empty fields
 		if(firstName.value ==""){
-			document.getElementById("errors").innerHTML = "Sorry, you forgot to enter your first name";
+			alert("bleh");
+			//document.getElementById("errors").innerHTML = "Sorry, you forgot to enter your first name";
 			return false; //this prevents form submission
+		} else {
+			document.getElementById("errors").innerHTML = "";
+			return true; //this allows form submission
 		}
 	}
 }
