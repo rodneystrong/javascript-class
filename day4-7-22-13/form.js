@@ -16,12 +16,17 @@ var submitButton = document.getElementById("submit-button");
 // 	 }
 // };
 
-
-	// submitButton.onclick = function() {
-	// 	alert("hi");
+function handleFormSubmit(){
 	document.getElementById("sign-up").onsubmit = function() {
-		alert("hi");
+		if(firstName.value==""){
+			alert("hi");
+		}
 	};
+}
+
+window.onload = function(){
+	handleFormSubmit();
+}
 
 
 
