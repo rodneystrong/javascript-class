@@ -21,9 +21,12 @@ function handleFormSubmit(){
 		if(firstName.value=="" || lastName.value =="" || zip.value ==""){
 			document.getElementById("errors").innerHTML = "One of your fields is empty :(";
 			return false;
+		} else if((firstName.value.length > 3) && (firstName.value.length < 50)) {
+			console.log("hi");
 		} else {
 			document.getElementById("errors").innerHTML = "";
 		}
+		return false;
 	};
 }
 
