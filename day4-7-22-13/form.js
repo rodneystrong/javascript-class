@@ -21,8 +21,10 @@ function handleFormSubmit(){
 		if(firstName.value=="" || lastName.value =="" || zip.value ==""){
 			document.getElementById("errors").innerHTML = "One of your fields is empty :(";
 			return false;
-		} else if((firstName.value.length > 3) && (firstName.value.length < 50)) {
-			console.log("hi");
+		} else if((firstName.value.length < 3) || (firstName.value.length > 50)) {
+			document.getElementById("errors").innerHTML = "Please enter a first and last name of more than 3 characters and less than 50 :(";
+		} else if(typeof(zip) == 12) {
+			document.getElementById("errors").innerHTML = "Please enter a number for your zip code :(";
 		} else {
 			document.getElementById("errors").innerHTML = "";
 		}
@@ -34,6 +36,7 @@ window.onload = function(){
 	handleFormSubmit();
 }
 
+console.log(typeof(zip));
 
 
 // var zip = document.getElementById("zip");
