@@ -2,6 +2,7 @@
 var firstName = document.getElementById("firstName");
 var lastName = document.getElementById("lastName");
 var zip = document.getElementById("zip");
+var submitButton = document.getElementById("submit");
 
 var Form = {
 	validateEmpty: function() {

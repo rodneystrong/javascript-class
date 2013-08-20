@@ -114,14 +114,7 @@ that will hold the end of the string.
 // 	return false;
 // }
 
-submitButton.onclick = console.log("wtf");
+//submitButton.onclick = console.log("wtf");
 
 //grab the submit button
 //tie the submit button to the onclick or onsubmit event handler and put that into a function that will be called onload.
-
-var submitButton = document.getElementById("submit");
-
-
-window.onload = function(){
-	getFormValidator();
-};
