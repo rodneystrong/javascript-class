@@ -18,8 +18,11 @@ var submitButton = document.getElementById("submit-button");
 
 function handleFormSubmit(){
 	document.getElementById("sign-up").onsubmit = function() {
-		if(firstName.value==""){
-			alert("hi");
+		if(firstName.value=="" || lastName.value =="" || zip.value ==""){
+			document.getElementById("errors").innerHTML = "One of your fields is empty :(";
+			return false;
+		} else {
+			document.getElementById("errors").innerHTML = "";
 		}
 	};
 }
