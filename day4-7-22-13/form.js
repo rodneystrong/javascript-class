@@ -4,17 +4,32 @@ var lastName = document.getElementById("lastName");
 var zip = document.getElementById("zip");
 var submitButton = document.getElementById("submit");
 
-var Form = {
-	validateEmpty: function() {
+// var Form = {
+// 	validateEmpty: function() {
 
-		if(firstName.value =="" || lastName.value =="" || zip.value ==""){
-		return false;
+// 		if(firstName.value =="" || lastName.value =="" || zip.value ==""){
+// 		return false;
+// 		}
+// 	},
+// 	 validateLength: function() {
+
+// 	 }
+// };
+
+function validateForm() {
+	document.getElementById("sign-up").onsubmit = function() {
+		//prevent form submission if empty fields
+		if(firstName.value ==""){
+			document.getElementById("errors").innerHTML = "Sorry, you forgot to enter your first name";
+			return false; //this prevents form submission
 		}
-	},
-	// validateLength: function() {
+	}
+}
 
-	// }
-};
+//call the validateForm event handler
+window.onload = function(){
+	validateForm();
+}
 
 // var zip = document.getElementById("zip");
 // if (tyepof(zip.value) == "") {
@@ -26,3 +41,13 @@ var Form = {
 // }
 
 //so, i'm not supposed to do any actions in the Form object? Like I can't do the .innerHTML method here?
+
+
+/*
+1) Ensure no fields are empty
+2) Names between 3 and 50 characters
+3) Zip code ->  only numbers 
+4) Give useful feedback to user in #errors div
+5) Do not allow page to refresh
+
+*/
