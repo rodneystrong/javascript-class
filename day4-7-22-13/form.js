@@ -20,16 +20,7 @@ var submitButton = document.getElementById("submit-button");
 	// submitButton.onclick = function() {
 	// 	alert("hi");
 	document.getElementById("sign-up").onsubmit = function() {
-		alert("bleh");
-		//prevent form submission if empty fields
-		if(firstName.value ==""){
-			//document.getElementById("errors").innerHTML = "Sorry, you forgot to enter your first name";
-			return false; //this prevents form submission
-		} else {
-			document.getElementById("errors").innerHTML = "";
-			return true; //this allows form submission
-		}
-		return false;
+		alert("hi");
 	};
 
 
