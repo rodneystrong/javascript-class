@@ -28,7 +28,7 @@ function validateForm() {
 			document.getElementById("errors").innerHTML = "";
 			return true; //this allows form submission
 		}
-	}
+	};
 }
 
 //call the validateForm event handler
